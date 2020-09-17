@@ -44,7 +44,7 @@ const Home = () => {
     
   </div>
 </nav>
-        <div className="row">
+        <div className="row bg" >
            {
                Fakedata.map(places => <Details key={places.title} places={places}></Details> ) 
            } 

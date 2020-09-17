@@ -9,7 +9,7 @@ const places = [
     {
         id : 2,
         title: 'Sree Mangal',
-        description: 'Standard Single Rooms are designed in open -concept living area and have many facilities.',
+        description: 'Standard Single Rooms are designed in open -concept living area and have many facilities.it is very close to Shylet',
        
         imgUrl: 'https://tse2.mm.bing.net/th?id=OIP.xt9LVl111D-qVVwTvULK5AHaDQ&pid=Api&P=0&w=378&h=167'
     },
