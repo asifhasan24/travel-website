@@ -19,10 +19,10 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Booking = (props) => {
-    const { id } = useParams()
+    const {id} = useParams()
     const product = Fakedata.find(pd => pd.id == id);
-    console.log(product)
-    // const {title} = product
+   
+
     const classes = useStyles();
     return (
         <div>

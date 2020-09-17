@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Details.css'
-import Box from '@material-ui/core/Box';
+
 
 
 const Details = (props) => {
