@@ -1,0 +1,9 @@
+.bg-img{
+    background: url(../Image/Rectangle\ 1.png);
+   
+    background-size: cover;
+}
+*{
+    font-size: 700;
+}
+   

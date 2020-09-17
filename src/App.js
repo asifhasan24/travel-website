@@ -17,7 +17,7 @@ import Search from './Components/Search/Search';
 export const UserContext = createContext()
 
 function App() {
-  const [loggedInUser,setLoggedInUser] = useState({})
+  const [loggedInUser,setLoggedInUser] = useState([])
   return (
     <UserContext.Provider value={ [loggedInUser,setLoggedInUser]}>
     
@@ -30,13 +30,13 @@ function App() {
           <Route path="/booking/:id">
            <Booking/>
           </Route>
-          {/* <PrivateRoute path="/search">
+          <PrivateRoute path="/search">
           <Search/>
-          </PrivateRoute> */}
-          <Route path="/search">
+          </PrivateRoute>
+          {/* <Route path="/search">
           <Search/>
            
-          </Route>
+          </Route> */}
        
           <Route path="/login">
           <Login/>

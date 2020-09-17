@@ -4,6 +4,7 @@ import Home from '../Home/Home';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Fakedata from '../../Fakedata/Place'
+import './booking.css'
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -25,14 +26,18 @@ const Booking = (props) => {
 
     const classes = useStyles();
     return (
-        <div>
+        <div className="bg-img">
            
-            <div className="col-md-6">
-            <h1>{product.title}</h1>
+           <div class="container  " style={{paddingTop:'150px',paddingBottom:'150px'}}>
+  <div class="row">
+    <div class="col" style={{color:'white',fontWeight:'900px'}}>
+    <br/>
+    <h1><b>{product.title}</b></h1>
+    <br/>
             <p>{product.description}</p>
-            </div>
-            <div className="col-md-6">
-            <form>
+    </div>
+    <div class="col" >
+    <form style={{color:'white'}} >
             <h6>Origin</h6>
             <input type="text" name="" id="" placeholder="starting Location" label="From"/>
             <br />
@@ -72,7 +77,15 @@ const Booking = (props) => {
             <br />
 
             <Link to="/search"><button type="button" class="btn btn-warning btn-lg">Start Booking</button></Link>
-            </div>
+            
+    </div>
+  </div>
+ 
+</div>
+            
+        
+        
+            
 
 
             

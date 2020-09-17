@@ -8,9 +8,10 @@ const Search = (props) => {
     const product = Fakedata.find(pd => pd.id == id);
     return (
         <div >
-       
-              <h3 style={{textAlign:'center'}}>welcome to</h3>
-              <br/>
+
+            <h3 style={{ textAlign: 'center' }}>welcome to</h3>
+            <p style={{ textAlign: 'center' }}>252 stays 1k+ guests</p>
+            <br />
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -21,9 +22,13 @@ const Search = (props) => {
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h5 class="card-title">Stylisht Appartment</h5>
+                                        <p class="card-text">4 guest 2 bath 2 beds</p>
+                                        <p class="card-text">wifi Air Conditioning kitchen</p>
+                                        <p class="card-text">All high facilities</p>
+                                        <p class="card-text">$60/night</p>
+                                    
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -36,9 +41,13 @@ const Search = (props) => {
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h5 class="card-title">Appartment in lost Panaroma</h5>
+                                      
+                                        <p class="card-text">4 guest 2 bath 2 beds</p>
+                                        <p class="card-text">wifi Air Conditioning kitchen</p>
+                                        <p class="card-text">All high facilities</p>
+                                        <p class="card-text">$40/night</p>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -51,9 +60,13 @@ const Search = (props) => {
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <h5 class="card-title">Ar Lounge and Pool</h5>
+                                            
+                                        <p class="card-text">4 guest 2 bath 2 beds</p>
+                                        <p class="card-text">wifi Air Conditioning kitchen</p>
+                                        <p class="card-text">All high facilities</p>
+                                        <p class="card-text">$50/night</p>
+                                        
                                     </div>
                                 </div>
                             </div>
