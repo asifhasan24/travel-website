@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Home from '../Home/Home';
+
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Fakedata from '../../Fakedata/Place'
@@ -26,7 +26,44 @@ const Booking = (props) => {
 
     const classes = useStyles();
     return (
+
         <div className="bg-img">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img style={{ width: '100px' }} src='https://i.ibb.co/9GcFB6q/Logo.png' alt="" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/home">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Destination</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </nav>
 
             <div class="container  " style={{ paddingTop: '150px', paddingBottom: '150px' }}>
                 <div class="row">
@@ -39,11 +76,11 @@ const Booking = (props) => {
                     <div class="col" >
                         <form style={{ color: 'white' }} >
                             <h6>Origin</h6>
-                            <input type="text" name="" id="" placeholder="starting Location" label="From" />
+                            <input type="text" name="from" id="" placeholder="starting Location" required />
                             <br />
                             <br />
                             <h6>Destination</h6>
-                            <input type="text" name="" id="" placeholder={product.title} label="From" />
+                            <input type="text" name="to" id="" placeholder={product.title} required />
                         </form>
                         <br />
 
@@ -59,6 +96,7 @@ const Booking = (props) => {
                                 className={classes.textField}
                                 InputLabelProps={{
                                     shrink: true,
+
                                 }}
 
                             />

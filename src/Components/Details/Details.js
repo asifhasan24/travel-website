@@ -13,7 +13,8 @@ const Details = (props) => {
 
     return (
 
-       
+
+
 
         <div className="col-md-4">
             <div class="card ">
@@ -25,7 +26,7 @@ const Details = (props) => {
                 </div>
             </div>
         </div>
-      
+
 
 
 
