@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Details.css'
+
+
+
 
 
 
@@ -9,6 +12,8 @@ const Details = (props) => {
 
 
     return (
+
+       
 
         <div className="col-md-4">
             <div class="card ">
@@ -20,6 +25,7 @@ const Details = (props) => {
                 </div>
             </div>
         </div>
+      
 
 
 

@@ -29,7 +29,7 @@ const Login = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function (result) {
       const { displayName, email } = result.user
-      const signedInUser = {name: displayName, email }
+      const signedInUser = { name: displayName, email }
       setLoggedInUser(signedInUser)
       history.replace(from)
 
@@ -37,14 +37,15 @@ const Login = () => {
       const errorMessage = error.message;
       console.log(errorMessage)
     });
+    
 
   }
   const handleFBLogin = () => {
     var fbProvider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(fbProvider).then(function (result) {
       const { displayName, email } = result.user
-      const signedInUser = {name: displayName, email }
-      console.log(signedInUser,result)
+      const signedInUser = { name: displayName, email }
+      console.log(signedInUser, result)
       setLoggedInUser(signedInUser)
       history.replace(from)
 
@@ -64,8 +65,8 @@ const Login = () => {
           newUserInfo.error = ''
           newUserInfo.success = true
           setUser(newUserInfo)
-          const signedInUser = {name: res.user.displayName, email:user.email }
-          console.log( signedInUser,from)
+          const signedInUser = { name: res.user.displayName, email: user.email }
+          console.log(signedInUser, from)
           setLoggedInUser(signedInUser)
           history.replace(from)
 
@@ -114,11 +115,11 @@ const Login = () => {
       isFieldValid = (isPasswordValid && passwordHasNumber)
     }
     if (e.target.name === 'cpassword') {
-     const password = document.getElementById("txtPassword").value;
-      const  confirmPassword = document.getElementById("txtConfirmPassword").value;
+      const password = document.getElementById("txtPassword").value;
+      const confirmPassword = document.getElementById("txtConfirmPassword").value;
       if (password !== confirmPassword) {
-          alert("Passwords do not match.");
-          return false;
+        alert("Passwords do not match.");
+        return false;
       }
       return true;
     }
@@ -133,8 +134,8 @@ const Login = () => {
 
 
   return (
-    <div className="bg-img" style={{paddingTop:'100px',paddingLeft:'500px'}}>
-      <h3 className="mb-5" style={{color:'whitesmoke'}}>{loggedInUser ? 'Create an Account' : 'Login'}</h3>
+    <div className="bg-img" style={{ paddingTop: '100px', paddingLeft: '500px' }}>
+      <h3 className="mb-5" style={{ color: 'whitesmoke' }}>{loggedInUser ? 'Create an Account' : 'Login'}</h3>
 
       <form onSubmit={handleSubmit}>
 
@@ -144,18 +145,18 @@ const Login = () => {
         <br />
         <input type="text" onBlur={handleBlur} name="email" className="mb-3" placeholder="your email address" required />
         <br />
-        <input type="password" onBlur={handleBlur} name="password"  className="mb-3"id="txtPassword" placeholder="your password" required />
+        <input type="password" onBlur={handleBlur} name="password" className="mb-3" id="txtPassword" placeholder="your password" required />
         <br />
         {loggedInUser && <input type="password" className="mb-5" onBlur={handleBlur} name="cpassword" id="txtConfirmPassword" placeholder="Confirm password" required />}
         <br />
 
-        <input type="submit"  className="btn btn-lg btn-warning" value={loggedInUser ? 'Create an account' : 'Login'} />
-        
-        
+        <input type="submit" className="btn btn-lg btn-warning" value={loggedInUser ? 'Create an account' : 'Login'} />
+
+
         <br />
         <input type="radio" onClick={() => setLoggedInUser(!loggedInUser)} name="newUser" id="" />
 
-        <label style={{color:'whitesmoke'}} htmlFor="newUser">{loggedInUser ? 'Already have an account?Login' : 'Dont have an account? Create a account'}</label>
+        <label style={{ color: 'whitesmoke' }} htmlFor="newUser">{loggedInUser ? 'Already have an account?Login' : 'Dont have an account? Create a account'}</label>
 
 
         <br />
